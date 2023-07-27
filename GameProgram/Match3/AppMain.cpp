@@ -77,13 +77,13 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstsnce, _
 		Input_Update();
 
 		//シーンマネージャー更新処理
-		SceneManeger_Update();
+		SceneManager_Update();
 
 		//画面クリア
 		ClearDrawScreen();
 
 		//シーンマネージャー描画処理
-		SceneManeger_Draw();
+		SceneManager_Draw();
 
 		//フレームレート制御処理
 		FreamControl_Update();
@@ -149,7 +149,7 @@ void FreamControl_Initialize(void)
 
 void FreamControl_Update(void)
 {
-	NowTime = GetNowcount();
+	NowTime = GetNowCount();
 	Wait = FreamTime - (NowTime - LastTime);
 
 	if (Wait > 0)
@@ -361,17 +361,17 @@ int GameMainScene_Initialize(void)
 	{
 		GameScore = 0;   //スコアの初期化
 		GameLevel = 1;   //ゲームレベルの初期化
-		Set_StageMisson(3);   //ミッションの初期化
+		Set_StageMission(3);   //ミッションの初期化
 		GameCount++;        //次回の設定
 	}
 
 	else
 	{
 		GameLevel++;     //ゲームレベルの更新
-		Set_StageMisson(3);   //ミッションを増やす
+		Set_StageMission(3);   //ミッションを増やす
 	}
 
-	GameTime = TIMELIMIT       //制限時間の初期化
+	GameTime = TIMELIMIT;      //制限時間の初期化
 
 		return ret;
 
@@ -845,7 +845,7 @@ int SceneManager_Initialize(GAME_MODE mode)
 	}
 
 	//ゲームオーバー画面
-	Read_Error = GameOverScene_initialize();
+	Read_Error = GameOverScene_Initialize();
 	if (Read_Error == D_ERROR)
 	{
 		return D_ERROR;
@@ -1133,7 +1133,7 @@ void StageDraw(void) {
 	//ブロックを描画
 	for (int i = 0; i < HEIGHT; i++)
 	{
-		for (int j = 0; j = < WIDTH; j++)
+		for (int j = 0; j  < WIDTH; j++)
 		{
 			if (Block[i][j].flg == TRUE && Block[i][j].image != NULL)
 			{
