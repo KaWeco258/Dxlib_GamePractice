@@ -1,7 +1,7 @@
 #include "GameMainScene.h"
 #include "DxLib.h"
 #include "Stage.h"
-#include "SceneManeger.h"
+#include "SceneManager.h"
 
 /*********************
 *ƒ}ƒNƒ’è‹`
