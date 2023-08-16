@@ -206,20 +206,24 @@ void CreateBlock(void)
 		Check = 0;
 		for (i = 0; i < HEIGHT; i++)
 		{
-			if (j == 0 || j == WIDTH - 1 || i == HEIGHT - 1 || i == 0)
+			for (j = 0; j < WIDTH; j++)
 			{
-				Block[i][j].flg = FALSE;
-				Block[i][j].image = NULL;
+				if (j == 0 || j == WIDTH - 1 || i == HEIGHT - 1 || i == 0)
+				{
+					Block[i][j].flg = FALSE;
+					Block[i][j].image = NULL;
+				}
+				else
+				{
+					Block[i][j].flg = TRUE;
+					Block[i][j].x = (j - 1) * BLOCKSIZE;
+					Block[i][j].y = (i - 1) * BLOCKSIZE;
+					Block[i][j].width = BLOCKSIZE;
+					Block[i][j].height = BLOCKSIZE;
+					Block[i][j].image = GetRand(7) + 1;//1~8の乱数
+				}
 			}
-			else
-			{
-				Block[i][j].flg = TRUE;
-				Block[i][j].x = (j - 1) * BLOCKSIZE;
-				Block[i][j].y = (i - 1) * BLOCKSIZE;
-				Block[i][j].width = BLOCKSIZE;
-				Block[i][j].height = BLOCKSIZE;
-				Block[i][j].image = GetRand(7) + 1;//1~8の乱数
-			}
+			
 		}
 
 
@@ -524,7 +528,7 @@ int Get_StageState(void)
 *戻り値：ミッションがクリアしているか
 ********************************/
 
-int GetStageClearFlag(void)
+int Get_StageClearFlag(void)
 {
 	return ClearFlag;
 }
