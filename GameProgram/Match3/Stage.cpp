@@ -121,7 +121,7 @@ int StageInitialize(void)
 	{
 		ret = -1;
 	}
-	if (ClickSE == -1);
+	if (ClickSE == -1)
 	{
 		ret = -1;
 	}
@@ -277,7 +277,7 @@ void SelectBlock(void)
 	//選択ブロックの範囲を制御
 	if (Select[SELECT_CURSOR].x < 0)
 	{
-		Select[SELECT_CURSOR].x < 0;
+		Select[SELECT_CURSOR].x = 0;
 	}
 	if (Select[SELECT_CURSOR].x > WIDTH - 3)
 	{
@@ -306,13 +306,13 @@ void SelectBlock(void)
 			ClickStatus = E_ONCE;
 		}
 		else if (ClickStatus == E_ONCE &&
-			((abs(Select[NEXT_CURSOR].x - Select[NEXT_CURSOR].x)
+			((abs(Select[NEXT_CURSOR].x - Select[SELECT_CURSOR].x)
 				== 1 &&
-				(abs(Select[NEXT_CURSOR].y - Select[NEXT_CURSOR].y)
+				(abs(Select[NEXT_CURSOR].y - Select[SELECT_CURSOR].y)
 					== 0)) ||
-				(abs(Select[NEXT_CURSOR].x - Select[NEXT_CURSOR].x)
+				(abs(Select[NEXT_CURSOR].x - Select[SELECT_CURSOR].x)
 					== 0 &&
-					abs(Select[NEXT_CURSOR].y - Select[NEXT_CURSOR].y) == 1)))
+					abs(Select[NEXT_CURSOR].y - Select[SELECT_CURSOR].y) == 1)))
 		{
 			Select[TMP_CURSOR].x = Select[SELECT_CURSOR].x;
 			Select[TMP_CURSOR].y = Select[SELECT_CURSOR].y;
