@@ -71,7 +71,6 @@ int GameMainScene_Initialize(void)
 		Set_StageMission(3);   //ミッションの初期化
 		GameCount++;        //次回の設定
 	}
-
 	else
 	{
 		GameLevel++;     //ゲームレベルの更新
