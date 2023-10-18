@@ -43,15 +43,18 @@ void FreamControl_Initialize(void)
 }
 
 /*
-*フレーム制御機能：初期化処理
+*フレーム制御機能：更新処理
 *引数：なし
 *戻り値：なし
 */
 
-void FreamControl_Initialize(void)
+void FreamControl_Update(void)
 {
-	FreamTime = ((int)1000.0f / FREAM_RATE);
-	NowTime = 0;
-	Wait = 0;
-	LastTime = 0;
+	NowTime = GetNowCount();
+	Wait = FreamTime - (NowTime - LastTime);
+	if (Wait > 0)
+	{
+		WaitTimer(Wait);
+	}
+	LastTime = GetNowCount();
 }
