@@ -56,5 +56,8 @@
     <ClInclude Include="InputControl.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="RankingScene.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
