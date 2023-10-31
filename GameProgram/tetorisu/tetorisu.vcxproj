@@ -138,6 +138,7 @@
     <ClCompile Include="GameMainScene.cpp" />
     <ClCompile Include="InputControl.cpp" />
     <ClCompile Include="RankingScene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="ソース.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +148,7 @@
     <ClInclude Include="GameMainScene.h" />
     <ClInclude Include="InputControl.h" />
     <ClInclude Include="RankingScene.h" />
+    <ClInclude Include="SceneManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

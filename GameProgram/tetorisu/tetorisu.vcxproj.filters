@@ -39,6 +39,9 @@
     <ClCompile Include="RankingScene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.h">
@@ -57,6 +60,9 @@
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="RankingScene.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
