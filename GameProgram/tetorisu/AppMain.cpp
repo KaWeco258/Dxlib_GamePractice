@@ -30,7 +30,7 @@
 プログラムの開始
 */
 
-int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstsnce,_In_
+int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,_In_
 LPSTR lpCmdLine, _In_ int nShowCmd)
 {
 	//タイトルを変更
@@ -64,8 +64,7 @@ LPSTR lpCmdLine, _In_ int nShowCmd)
 	SetFontSize(FONT_SIZE);
 
 	//ゲームループ
-	while (ProcessMessage() == 0 && GetExitButton() != TRUE && ErrorCheck() ==
-		D_NORMALITY)
+	while (ProcessMessage() == 0 && GetExitButton() != TRUE && ErrorCheck() == D_NORMALITY)
 	{
 		//フレーム制御機能更新処理
 		FreamControl_Update();

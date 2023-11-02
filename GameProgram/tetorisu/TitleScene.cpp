@@ -89,6 +89,7 @@ void TitleScene_Update(void)
 			break;
 		case 1:
 			Change_Scene(E_RANKING);
+			break;
 		case 2:
 		default:
 			Change_Scene(E_END);
@@ -109,7 +110,7 @@ void TitleScene_Update(void)
 		}
 	}
 
-	if (GetButtonUp(XINPUT_BUTTON_DPAD_DOWN) == TRUE);
+	if (GetButtonUp(XINPUT_BUTTON_DPAD_DOWN) == TRUE)
 	{
 		PlaySoundMem(sounds[E_TITLE_SE_CURSOR], DX_PLAYTYPE_NORMAL, FALSE);
 		if (cursor_number >= 2)
