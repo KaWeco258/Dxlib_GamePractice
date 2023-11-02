@@ -19,5 +19,5 @@ int RankingScene_Initialize(void);
 void RankingScene_Update(void);
 void RankingScene_Draw(void);
 
-void SetRankingMode(int mode);
-void SetRankingScore(int score);
+void Set_RankingMode(int mode);
+void Set_RankingScore(int score);

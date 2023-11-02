@@ -49,7 +49,7 @@ void SceneManager_Initialize(GAME_MODE mode)
 		if (game_mode == E_GAMEMAIN)
 		{
 			Set_RankingMode(RANKING_INPUT_MODE);   //ランキング入力モードで起動
-			SetRankingScore(Get_Score());
+			Set_RankingScore(Get_Score());
 		}
 		else
 		{
