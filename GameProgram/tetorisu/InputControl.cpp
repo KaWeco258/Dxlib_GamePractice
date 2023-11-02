@@ -1,4 +1,4 @@
-#include "InputCountrol.h"
+#include "InputControl.h"
 #include "DxLib.h"
 
 /*
