@@ -14,7 +14,7 @@
 *プロトタイプ宣言
 */
 
-void IuputCountrol_Initialize(void);     //初期化処理
+void IuputControl_Initialize(void);     //初期化処理
 void InputControl_Update(void);        //更新処理
 
 int GetButton(int button);            //押されているか判定処理

@@ -5,6 +5,7 @@
 #include "EndScene.h"
 #include "DxLib.h"
 
+
 /*
 *ƒ}ƒNƒ’è‹`
 */
