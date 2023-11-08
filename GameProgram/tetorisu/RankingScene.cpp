@@ -63,13 +63,13 @@ int RankingScene_Initialize(void)
 
 	switch (DispMode)
 	{
-	case RANKING_INPUT_MODE:
+	 case RANKING_INPUT_MODE:
 		Cursor.x = 0;
 		Cursor.y = 0;
 		name_num = 0;
 		break;
-	case RANKING_DISP_MODE:
-	default:
+	 case RANKING_DISP_MODE:
+	 default:
 
 		break;
 	}
@@ -86,11 +86,11 @@ void RankingScene_Update(void)
 {
 	switch (DispMode)
 	{
-	case RANKING_INPUT_MODE:
+	 case RANKING_INPUT_MODE:
 		ranking_input_name();
 		break;
-	case RANKING_DISP_MODE:
-	default:
+	 case RANKING_DISP_MODE:
+	 default:
 		if (GetButtonDown(XINPUT_BUTTON_B))
 		{
 			Change_Scene(E_TITLE);
@@ -111,11 +111,11 @@ void RankingScene_Draw(void)
 
 	switch (DispMode)
 	{
-	case RANKING_INPUT_MODE:
+	 case RANKING_INPUT_MODE:
 		ranking_input_name_draw();
 		break;
-	case RANKING_DISP_MODE:
-	default:
+	 case RANKING_DISP_MODE:
+	 default:
 		for (i = 0; i < RANKING_MAX; i++)
 		{
 			DrawFormatString(20, 10 + (i * 25), GetColor(255, 255, 255), "%2d,%10s,%10d"
