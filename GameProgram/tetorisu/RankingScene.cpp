@@ -350,10 +350,13 @@ void ranking_input_name_draw(void)
 			GetColor(255, 255, 255), "%-3c", '0' + i);
 	}
 
+	DrawFormatString((10 % 13 * 50) + 300, (10 / 13 * 50) + 530, GetColor(0, 255, 0), "消");
+	DrawFormatString((11 % 13 * 50) + 300, (11 / 13 * 50) + 530, GetColor(255, 0, 255),"決定");
 	DrawFormatString(300, 220, GetColor(255, 255, 255), ">%s",New_Score.name);
 
 	SetFontSize(20);
 
+	//DrawFormatString()
 	//選択している文字をフォーカスしている
 	DrawBox((Cursor.x * 50) + 290, (Cursor.y * 50) + 330,
 		(Cursor.x * 50) + 330, (Cursor.y * 50) + 370,
